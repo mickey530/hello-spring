@@ -13,12 +13,18 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 //	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-//	runtimeOnly 'com.h2database:h2'
-	implementation 'mysql:mysql-connector-java'
+	// 이 의존성이 SLF4J와 Logback을 포함합니다.
+	implementation 'org.springframework.boot:spring-boot-starter-logging'
+	runtimeOnly 'com.h2database:h2'
+//	implementation 'mysql:mysql-connector-java'
+	// spring security 추가
+	implementation 'org.projectlombok:lombok'
 	testImplementation ('org.springframework.boot:spring-boot-starter-test'){
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}

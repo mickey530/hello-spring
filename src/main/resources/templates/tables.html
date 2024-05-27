@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout/layout}"
+><head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Insert title here</title>
+</head>
+<div layout:fragment="content">
+    <div class="content">
+        <h2 id="title"></h2>
+        <div style="display:flex; justify-content:space-between;">
+            <div class="search-group" style="display:flex;gap:10px;">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <input type="text" class="form-control" id="search" placeholder="Search">
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button id="open-column-modal" class="open-modal btn btn-primary">+ Column</button>
+                <button id="open-row-modal" class="open-modal btn btn-primary">+ Row</button>
+            </div>
+        </div>
+        <div class="table-wrapper" style="padding: 24px;border: 1px solid var(--bs-border-color);border-radius: var(--bs-border-radius);overflow-x: auto;">
+            <table id="table" class="table table-hover">
+
+            </table>
+        </div>
+
+
+        <!-- 모달창 (여기에 테이블 정보 넣어서 insert 문에 필요한 정보들 노출해야함) -->
+        <!-- 컬럼 추가 모달창 -->
+        <dialog class="column-modal modal-dialog" style="border:none;border-radius:0.375rem;box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">
+            <div class="modal-content" style="border:none;">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Column</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div>
+                            <div class="mb-3">
+                                <label for="column-name" class="form-label">Column Name</label>
+                                <input type="text" class="form-control" id="column-name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="column-type" class="form-label">Column Type</label>
+                                <select class="form-select" id="column-type"></select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-dialog">Close</button>
+                    <button id="add-column" type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </dialog>
+
+        <dialog class="row-modal modal-dialog" style="border:none;border-radius:0.375rem;box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">
+            <div class="modal-content" style="border:none;">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Row</h5>
+                </div>
+                <div class="modal-body">
+                    <form method="dialog"></form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-dialog">Close</button>
+                    <button id="add-row" type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </dialog>
+
+        <dialog class="table-modal modal-dialog" style="border:none;border-radius:0.375rem;box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">
+            <div class="modal-content" style="border:none;">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create Table</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="table-name" class="form-label">Table Name</label>
+                            <input type="text" class="form-control" id="table-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="col1-name" class="form-label">Column Name</label>
+                            <input type="text" class="form-control" id="col1-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="col1-type" class="form-label">Column Type</label>
+                            <select class="form-select" id="col1-type"></select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-dialog">Close</button>
+                    <button id="create-table" type="button" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </dialog>
+
+
+    </div>
+
+
+    <script>
+
+        // 데이터는 여기에 저장
+        const dataStore = {
+            tableList: [],
+            tblIdx: 0,
+            selectedTbl : {},
+            tableData : [],
+            dataType : {},
+        };
+
+        // 네이게이션바 태그 (테이블 목록)
+        document.querySelector("#navbar > .title").innerText = "Tables"
+        const navbar = document.querySelector("#navbar > ul");
+
+
+        // 테이블 리스트 정보 가져옴
+        const fetchData = async () => {
+            return new Promise((resolve, reject) => {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', '/tableList', true);
+                xhr.onload = function() {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        var data = JSON.parse(xhr.responseText);
+                        // 데이터 세팅
+                        dataStore.tableList = data;
+                        resolve(data); // 성공적으로 데이터를 가져온 경우 resolve 호출
+                    } else {
+                        console.error('Failed to fetch data');
+                        reject(xhr.statusText); // 데이터를 가져오는 데 실패한 경우 reject 호출
+                    }
+                };
+                xhr.onerror = function() {
+                    console.error('Failed to fetch data');
+                    reject(xhr.statusText); // 데이터를 가져오는 데 실패한 경우 reject 호출
+                };
+                xhr.send();
+            });
+        }
+
+        // 테이블 데이터 가져옴
+        const fetchTblData = async (tblIdx) => {
+            return new Promise((resolve, reject) => {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', '/table/' + tblIdx, true);
+                xhr.onload = function() {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        var data = JSON.parse(xhr.responseText);
+                        // 데이터 세팅
+                        dataStore.tableData = data;
+                        resolve(data); // 성공적으로 데이터를 가져온 경우 resolve 호출
+                    } else {
+                        console.error('Failed to fetch data');
+                        reject(xhr.statusText); // 데이터를 가져오는 데 실패한 경우 reject 호출
+                    }
+                };
+                xhr.onerror = function() {
+                    console.error('Failed to fetch data');
+                    reject(xhr.statusText); // 데이터를 가져오는 데 실패한 경우 reject 호출
+                };
+                xhr.send();
+            });
+        }
+
+        function renderNavbar(data) {
+            console.log(data)
+            dataStore.selectedTbl = data[0];
+            data.map((d, i)=> {
+              var li = document.createElement('li');
+              var a = document.createElement('a')
+              li.classList.add("nav-item");
+              a.classList.add("nav-link");
+              a.textContent = d.tableName;
+              a.setAttribute("href", "/" + d.tableName);
+              a.setAttribute("data-num", i);
+              li.appendChild(a);
+              navbar.appendChild(li);
+            })
+
+            const openTableModal = document.createElement("button");
+            openTableModal.id = "open-table-modal"
+            openTableModal.classList.add("open-modal")
+            openTableModal.classList.add("btn")
+            openTableModal.innerText = "Create Table"
+            openTableModal.addEventListener("click", ()=>{
+                document.querySelector(".table-modal").showModal();
+            })
+
+            navbar.appendChild(openTableModal);
+        }
+
+        // 최초 로딩시 테이블 리스트 호출
+
+
+        // 테이블 메뉴 선택시
+        navbar.addEventListener("click", (e)=>{
+
+            e.preventDefault();
+
+            e.target.tagName === 'A' ? setCurrentTable(e.target.dataset.num) : null;
+
+        })
+
+
+        // 선택한 테이블 정보로 content 수정
+        const setCurrentTable = async (num) => {
+
+            // 선택한 테이블 정보 세팅
+            dataStore.selectedTbl = dataStore.tableList[num];
+            dataStore.tblIdx = num;
+            dataStore.tableData = await fetchTblData(num);
+
+
+            // 테이블 생성 (이 부분이 밖으로 빠져서 옵저버로 처리할 예정)
+            renderTable();
+
+        }
+
+
+        // 테이블 생성
+        const renderTable = () => {
+
+            const table = document.querySelector("#table");
+
+            // 기존에 선택한 테이블이 존재한다면 clear
+            document.querySelector("#table > thead")?.remove();
+            document.querySelector("#table > tbody")?.remove();
+
+            // 선택한 테이블, 데이터
+            const selectedTbl = dataStore.selectedTbl
+            const tableData = dataStore.tableData;
+
+            // 타이틀 업데이트
+            document.querySelector("#title").innerText = dataStore.selectedTbl.tableName;
+
+
+            // 테이블 헤더 태그 생성
+            const thead = document.createElement("thead");
+            const header = document.createElement("tr");
+            const th = document.createElement("th");
+            th.innerText = "#";
+            header.appendChild(th);
+
+            selectedTbl.columnList.forEach(c => {
+                const th = document.createElement("th");
+                th.innerText = c.columnName;
+                header.appendChild(th);
+            })
+
+            thead.appendChild(header);
+            table.appendChild(thead);
+
+            // 테이블 바디 태그 생성
+            const tbody = document.createElement("tbody");
+            tbody.classList.add("table-group-divider");
+
+            // 테이블 데이터 컬럼 순서에 맞춰서 출력 (이걸로 테이블 바디 태그 생성할 것)
+            dataStore.tableData.forEach((d, i)=>{
+                 const row = document.createElement("tr");
+                 const idxCol = document.createElement("th");
+                 idxCol.innerText = i + 1;
+                 row.appendChild(idxCol);
+
+                 dataStore.selectedTbl.columnList.forEach(c=>{
+                      const td = document.createElement("td");
+                      td.innerText = d[c.columnName];
+                      row.appendChild(td);
+                      console.log(d[c.columnName])
+                 })
+                 tbody.appendChild(row);
+            })
+
+            table.appendChild(tbody);
+
+        }
+
+
+
+
+
+        const table = document.querySelector("#table");
+
+        // 테이블 요소에 클릭 이벤트 리스너 추가
+        table.addEventListener("click", function(event) {
+            // 클릭된 요소가 테이블 셀인 경우에만 실행
+            if (event.target.tagName === 'TD') {
+                // 클릭된 셀의 텍스트 내용을 콘솔에 로그로 출력
+                console.log(event.target.textContent);
+            }
+        });
+
+        // /tables 진입시 실행되는 함수 >> 나중에 공통 스크립트 파일로 뺄듯?
+        window.addEventListener('load', async function() {
+            // 웹페이지 초기화 작업 수행
+            console.log('웹페이지가 완전히 로드되었습니다.');
+
+            // 데이터 땡겨오기
+            await fetchData();
+
+            // 네비게이션바, 콘텐츠 영역 렌더링 (selectedTbl = 0)
+            renderNavbar(dataStore.tableList);
+            setCurrentTable(0);
+            renderTable();
+
+        });
+
+        // 레코드 모달 오픈 버튼
+        const openRowModal = document.querySelector('#open-row-modal')
+
+        // 컬럼 모달 오픈 버튼
+        const openColumnModal = document.querySelector('#open-column-modal')
+
+        // 모달창
+        const colModal = document.querySelector('dialog.column-modal')
+        const rowModal = document.querySelector('dialog.row-modal')
+
+        openRowModal.addEventListener('click', (e) => {
+          createRowTag();
+          rowModal.showModal();
+        })
+
+        openColumnModal.addEventListener('click', (e) => {
+          createDataSelectTag();
+          colModal.showModal();
+        })
+
+        // 모든 .close-dialog 클래스를 가진 요소 선택
+        const closeButtons = document.querySelectorAll(".close-dialog");
+
+        // 각 요소에 대해 이벤트 리스너 추가
+        closeButtons.forEach(button => {
+          button.addEventListener('click', function(e) {
+            // 다이얼로그 중 attribute가 open인 요소 닫기
+            const openDialog = document.querySelector('dialog[open]');
+            if (openDialog) {
+              openDialog.close();
+            }
+          });
+        });
+
+        // 추후 페이징 처리 관련 로직 추가 예정
+        const createRowTag = () => {
+
+            // 기존에 있는 form 태그가 존재한다면 삭제
+            document.querySelector(".row-modal > div >.modal-body > form")?.remove();
+
+            // form 태그 생성
+            const form = document.createElement("form");
+            form.classList.add("dialog");
+
+            dataStore.selectedTbl.columnList.forEach(d=>{
+
+                // form 그룹 태그 생성
+                const formGrp = document.createElement("div");
+                formGrp.classList.add("form-group");
+
+                // label 태그 생성
+                const label = document.createElement("label");
+                label.setAttribute("for", d.columnName);
+                label.innerText = d.columnName;
+
+                if(d.dataType !== "BOOLEAN"){
+
+                // input 태그 생성 (text, number, date)
+                const input = document.createElement("input");
+                input.setAttribute("type", dataStore.dataType[d.dataType]);
+                input.classList.add("form-control");
+                input.id = d.columnName;
+                input.name = d.columnName;
+                d.columnName === "ID" ? input.setAttribute("readonly", true) : null;
+
+                // 세팅
+                formGrp.appendChild(label);
+                formGrp.appendChild(input);
+                form.appendChild(formGrp);
+
+                } else {
+
+                // select 태그 생성 (boolean, lookup) >> 이 부분 웹컴포넌트 문법으로 처리할 수 있으면 좋을듯?
+                const select = document.createElement("select");
+                select.id = d.columnName;
+                select.name = d.columnName;
+                select.classList.add("form-control");
+
+                const optionT = document.createElement("option");
+                const optionF = document.createElement("option");
+                optionT.value = true;
+                optionT.innerText = "true";
+                optionF.value = false;
+                optionF.innerText = "false";
+
+                select.appendChild(optionT);
+                select.appendChild(optionF);
+
+                // 세팅
+                formGrp.appendChild(label);
+                formGrp.appendChild(select);
+                form.appendChild(formGrp);
+
+                }
+
+                document.querySelector(".row-modal > div >.modal-body").appendChild(form)
+
+                console.log("col : " + d.columnName + " || type : " + d.dataType );
+            })
+        }
+
+        // 이것도 디비에서 조회해서 처리하는 걸로 변경 예정
+        dataStore.dataType = {
+            BIGINT  : "number",
+            INTEGER : "number",
+            VARCHAR : "text",
+            CLOB    : "text",
+            DATE    : "date",
+            BOOLEAN : "checked"
+        }
+
+        const createDataSelectTag = () => {
+            const selectBox = document.querySelector("#column-type");
+
+            Object.keys(dataStore.dataType).forEach(d=>{
+                const optionTag = document.createElement("option");
+                optionTag.value = d;
+                optionTag.innerText = d;
+                selectBox.appendChild(optionTag);
+            })
+        }
+
+
+        // insert 데이터
+        const insertData = async () => {
+
+            // 데이터 초기화
+            const data = {};
+
+            // 데이터 맵핑
+            dataStore.selectedTbl.columnList.forEach(c=>{
+                data[c.columnName] = document.querySelector("#" + c.columnName).value;
+            })
+
+
+
+            return new Promise((resolve, reject) => {
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/table/' + dataStore.tblIdx, true);
+                xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8'); // JSON 형식으로 전송하기 위해 헤더 설정
+                xhr.onload = function() {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        resolve(xhr.responseText); // 성공적으로 데이터를 가져온 경우 resolve 호출
+                    } else {
+                        console.error('Failed to insert data');
+                        reject(xhr.statusText); // 데이터를 가져오는 데 실패한 경우 reject 호출
+                    }
+                };
+                xhr.onerror = function() {
+                    console.error('Failed to insert data');
+                    reject(xhr.statusText); // 데이터를 가져오는 데 실패한 경우 reject 호출
+                };
+                xhr.send(JSON.stringify(data)); // JSON 형식으로 데이터 전송
+            });
+        }
+
+        document.querySelector("#add-row").addEventListener("click", insertData)
+
+
+        // 컬럼 추가
+        const addColumn = async () => {
+
+            // 데이터
+            const data = {
+                columnName : document.querySelector("#column-name").value,
+                dataType   : document.querySelector("#column-type").value
+            };
+
+            return new Promise((resolve, reject) => {
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/table/' + dataStore.tblIdx + '/addColumn', true);
+                xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8'); // JSON 형식으로 전송하기 위해 헤더 설정
+                xhr.onload = function() {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        resolve(xhr.responseText); // 성공적으로 데이터를 가져온 경우 resolve 호출
+                    } else {
+                        console.error('Failed to insert data');
+                        reject(xhr.statusText); // 데이터를 가져오는 데 실패한 경우 reject 호출
+                    }
+                };
+                xhr.onerror = function() {
+                    console.error('Failed to insert data');
+                    reject(xhr.statusText); // 데이터를 가져오는 데 실패한 경우 reject 호출
+                };
+                xhr.send(JSON.stringify(data)); // JSON 형식으로 데이터 전송
+            });
+        }
+
+        document.querySelector("#add-column").addEventListener("click", addColumn)
+
+
+
+class CustomInput extends HTMLElement {
+    connectedCallBack() {
+        let label = document.createElement('label');
+        label.innerHTML = "ㅎㅇㅎㅇ";
+        this.appendChild(label);
+        let input = document.createElement('input');
+        this.appendChild(input);
+    }
+}
+
+customElements.define("custom-input", CustomInput);
+
+
+    </script>
+</div> <!-- /content -->
+
+</html>

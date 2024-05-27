@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+><head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Insert title here</title>
+</head>
+<body>
+<h1>Member Form</h1>
+<form th:action="@{/join}" method="post">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" th:field="*{member.username}" required/>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" th:field="*{member.password}" required/>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" th:field="*{member.email}" required/>
+    </div>
+    <div class="form-group">
+        <label for="pw">PW</label>
+        <input type="password" class="form-control" id="pw" th:field="*{member.pw}" required/>
+    </div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" th:field="*{member.name}" required/>
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <select class="form-control" id="gender" th:field="*{member.gender}" required>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="birthdate">Birthdate</label>
+        <input type="date" class="form-control" id="birthdate" th:field="*{member.birthdate}" required/>
+    </div>
+    <div class="form-group">
+        <label for="contact">Contact</label>
+        <input type="text" class="form-control" id="contact" th:field="*{member.contact}" required/>
+    </div>
+    <div class="form-group">
+        <label for="accept">Accept</label>
+        <input type="checkbox" class="form-control" id="accept" th:field="*{member.accept}"/>
+    </div>
+    <div class="form-group">
+        <label for="role">Role</label>
+        <select class="form-control" id="role" th:field="*{member.role}" required>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+</body>
+</html>

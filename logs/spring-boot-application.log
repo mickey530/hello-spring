@@ -1,0 +1,1562 @@
+2024-05-27 10:52:40 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 25956 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 10:52:40 - No active profile set, falling back to default profiles: default
+2024-05-27 10:52:41 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 10:52:41 - Finished Spring Data repository scanning in 80ms. Found 1 JPA repository interfaces.
+2024-05-27 10:52:42 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 10:52:42 - Starting service [Tomcat]
+2024-05-27 10:52:42 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 10:52:42 - Initializing Spring embedded WebApplicationContext
+2024-05-27 10:52:42 - Root WebApplicationContext: initialization completed in 2211 ms
+2024-05-27 10:52:42 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 10:52:43 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 10:52:43 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 10:52:43 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 10:52:43 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 10:52:44 - HikariPool-1 - Starting...
+2024-05-27 10:52:44 - HikariPool-1 - Start completed.
+2024-05-27 10:52:44 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 10:52:45 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 10:52:45 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 10:52:46 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7574d4ad, org.springframework.security.web.context.SecurityContextPersistenceFilter@147e0734, org.springframework.security.web.header.HeaderWriterFilter@539fc5d1, org.springframework.security.web.csrf.CsrfFilter@401788d5, org.springframework.security.web.authentication.logout.LogoutFilter@532dacf5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@677cb96e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b8aebd0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71369e1a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7bede4ea, org.springframework.security.web.session.SessionManagementFilter@60b616c8, org.springframework.security.web.access.ExceptionTranslationFilter@44dd0d38, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@bb8ead8]
+2024-05-27 10:52:46 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 10:52:46 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'loginController' method 
+hello.hellospring.controller.LoginController#login()
+to {GET /login}: There is already 'homeController' bean method
+hello.hellospring.controller.HomeController#login() mapped.
+2024-05-27 10:52:46 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 10:52:46 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 10:52:46 - HikariPool-1 - Shutdown initiated...
+2024-05-27 10:52:46 - HikariPool-1 - Shutdown completed.
+2024-05-27 10:52:46 - Stopping service [Tomcat]
+2024-05-27 10:52:46 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-27 10:52:46 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'loginController' method 
+hello.hellospring.controller.LoginController#login()
+to {GET /login}: There is already 'homeController' bean method
+hello.hellospring.controller.HomeController#login() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:893)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at hello.hellospring.HelloSpringApplication.main(HelloSpringApplication.java:10)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'loginController' method 
+hello.hellospring.controller.LoginController#login()
+to {GET /login}: There is already 'homeController' bean method
+hello.hellospring.controller.HomeController#login() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:636)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:603)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 17 common frames omitted
+2024-05-27 10:54:03 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 25168 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 10:54:03 - No active profile set, falling back to default profiles: default
+2024-05-27 10:54:04 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 10:54:04 - Finished Spring Data repository scanning in 71ms. Found 1 JPA repository interfaces.
+2024-05-27 10:54:05 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 10:54:05 - Starting service [Tomcat]
+2024-05-27 10:54:05 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 10:54:05 - Initializing Spring embedded WebApplicationContext
+2024-05-27 10:54:05 - Root WebApplicationContext: initialization completed in 2108 ms
+2024-05-27 10:54:06 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 10:54:06 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 10:54:06 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 10:54:06 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 10:54:06 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 10:54:07 - HikariPool-1 - Starting...
+2024-05-27 10:54:07 - HikariPool-1 - Start completed.
+2024-05-27 10:54:07 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 10:54:08 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 10:54:08 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 10:54:09 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c995c5d, org.springframework.security.web.context.SecurityContextPersistenceFilter@7336fd8f, org.springframework.security.web.header.HeaderWriterFilter@448cdb47, org.springframework.security.web.csrf.CsrfFilter@37c1cfa, org.springframework.security.web.authentication.logout.LogoutFilter@ee96866, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@77fc19cf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@550c973e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@539fc5d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@203b953c, org.springframework.security.web.session.SessionManagementFilter@2b01c689, org.springframework.security.web.access.ExceptionTranslationFilter@5f56424d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@48dff674]
+2024-05-27 10:54:09 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 10:54:09 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 10:54:09 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 10:54:09 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 10:54:09 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 10:54:10 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 10:54:10 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 10:54:10 - Spring Data repositories initialized!
+2024-05-27 10:54:10 - Started HelloSpringApplication in 7.875 seconds (JVM running for 8.368)
+2024-05-27 10:55:05 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 10:55:05 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 10:55:05 - Detected StandardServletMultipartResolver
+2024-05-27 10:55:05 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 10:55:05 - Completed initialization in 9 ms
+2024-05-27 10:55:05 - GET "/login?error", parameters={masked}
+2024-05-27 10:55:05 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 10:55:05 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 10:55:05 - Completed 200 OK
+2024-05-27 10:55:22 - GET "/login?error", parameters={masked}
+2024-05-27 10:55:22 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 10:55:22 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 10:55:22 - Completed 200 OK
+2024-05-27 10:56:40 - GET "/login", parameters={}
+2024-05-27 10:56:40 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 10:56:40 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 10:56:40 - Completed 200 OK
+2024-05-27 10:57:54 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 10:57:54 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 10:57:54 - HikariPool-1 - Shutdown initiated...
+2024-05-27 10:57:54 - HikariPool-1 - Shutdown completed.
+2024-05-27 10:57:58 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 17844 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 10:57:58 - No active profile set, falling back to default profiles: default
+2024-05-27 10:57:59 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 10:57:59 - Finished Spring Data repository scanning in 79ms. Found 1 JPA repository interfaces.
+2024-05-27 10:58:00 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 10:58:00 - Starting service [Tomcat]
+2024-05-27 10:58:00 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 10:58:00 - Initializing Spring embedded WebApplicationContext
+2024-05-27 10:58:00 - Root WebApplicationContext: initialization completed in 2056 ms
+2024-05-27 10:58:01 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 10:58:01 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 10:58:01 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 10:58:01 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 10:58:01 - HikariPool-1 - Starting...
+2024-05-27 10:58:02 - HikariPool-1 - Start completed.
+2024-05-27 10:58:02 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 10:58:02 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 10:58:02 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 10:58:03 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [C:\Users\JANG\gittest\hello-spring\out\production\classes\hello\hellospring\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberService' defined in file [C:\Users\JANG\gittest\hello-spring\out\production\classes\hello\hellospring\service\MemberService.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2024-05-27 10:58:03 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 10:58:03 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 10:58:03 - HikariPool-1 - Shutdown initiated...
+2024-05-27 10:58:03 - HikariPool-1 - Shutdown completed.
+2024-05-27 10:58:03 - Stopping service [Tomcat]
+2024-05-27 10:58:03 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-27 10:58:03 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  securityConfig defined in file [C:\Users\JANG\gittest\hello-spring\out\production\classes\hello\hellospring\SecurityConfig.class]
+↑     ↓
+|  memberService defined in file [C:\Users\JANG\gittest\hello-spring\out\production\classes\hello\hellospring\service\MemberService.class]
+└─────┘
+
+
+2024-05-27 12:28:03 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 19252 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 12:28:03 - No active profile set, falling back to default profiles: default
+2024-05-27 12:28:04 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 12:28:04 - Finished Spring Data repository scanning in 79ms. Found 1 JPA repository interfaces.
+2024-05-27 12:28:05 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 12:28:05 - Starting service [Tomcat]
+2024-05-27 12:28:05 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 12:28:05 - Initializing Spring embedded WebApplicationContext
+2024-05-27 12:28:05 - Root WebApplicationContext: initialization completed in 2199 ms
+2024-05-27 12:28:05 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 12:28:06 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 12:28:06 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 12:28:06 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 12:28:06 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 12:28:07 - HikariPool-1 - Starting...
+2024-05-27 12:28:07 - HikariPool-1 - Start completed.
+2024-05-27 12:28:07 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 12:28:08 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 12:28:08 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 12:28:09 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@394fb736, org.springframework.security.web.context.SecurityContextPersistenceFilter@112c2930, org.springframework.security.web.header.HeaderWriterFilter@660b1a9d, org.springframework.security.web.csrf.CsrfFilter@3cf55e0c, org.springframework.security.web.authentication.logout.LogoutFilter@1e734eee, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1883871b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28e7bb31, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7523d5a1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3070f3e6, org.springframework.security.web.session.SessionManagementFilter@d6b532f, org.springframework.security.web.access.ExceptionTranslationFilter@6d31f106, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1cba0321]
+2024-05-27 12:28:09 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 12:28:09 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 12:28:09 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 12:28:09 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 12:28:09 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 12:28:10 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 12:28:10 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 12:28:10 - Spring Data repositories initialized!
+2024-05-27 12:28:10 - Started HelloSpringApplication in 7.645 seconds (JVM running for 8.143)
+2024-05-27 12:28:16 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 12:28:16 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 12:28:16 - Detected StandardServletMultipartResolver
+2024-05-27 12:28:16 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 12:28:16 - Completed initialization in 12 ms
+2024-05-27 12:28:16 - GET "/login", parameters={}
+2024-05-27 12:28:16 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 12:28:16 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 12:28:17 - Completed 200 OK
+2024-05-27 12:28:24 - GET "/login?error", parameters={masked}
+2024-05-27 12:28:24 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 12:28:24 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 12:28:24 - Completed 200 OK
+2024-05-27 12:33:21 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 12:33:21 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 12:33:21 - HikariPool-1 - Shutdown initiated...
+2024-05-27 12:33:21 - HikariPool-1 - Shutdown completed.
+2024-05-27 12:33:26 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 12672 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 12:33:26 - No active profile set, falling back to default profiles: default
+2024-05-27 12:33:27 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 12:33:27 - Finished Spring Data repository scanning in 77ms. Found 1 JPA repository interfaces.
+2024-05-27 12:33:28 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 12:33:28 - Starting service [Tomcat]
+2024-05-27 12:33:28 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 12:33:28 - Initializing Spring embedded WebApplicationContext
+2024-05-27 12:33:28 - Root WebApplicationContext: initialization completed in 2109 ms
+2024-05-27 12:33:28 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 12:33:28 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 12:33:29 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 12:33:29 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 12:33:29 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 12:33:29 - HikariPool-1 - Starting...
+2024-05-27 12:33:29 - HikariPool-1 - Start completed.
+2024-05-27 12:33:30 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 12:33:31 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 12:33:31 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 12:33:32 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4aa22cc2, org.springframework.security.web.context.SecurityContextPersistenceFilter@44641d6c, org.springframework.security.web.header.HeaderWriterFilter@32e5af53, org.springframework.security.web.csrf.CsrfFilter@6d31f106, org.springframework.security.web.authentication.logout.LogoutFilter@6735f210, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@13004dd8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59d5a6fd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e191150, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2049e582, org.springframework.security.web.session.SessionManagementFilter@13ca16bf, org.springframework.security.web.access.ExceptionTranslationFilter@2bfc2f8b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@394fb736]
+2024-05-27 12:33:32 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationSuccessHandler' defined in class path resource [hello/hellospring/SecurityConfig.class]: Initialization of bean failed; nested exception is org.springframework.aop.framework.AopConfigException: Unexpected AOP exception; nested exception is java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "cause" is null
+2024-05-27 12:33:32 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 12:33:32 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 12:33:32 - HikariPool-1 - Shutdown initiated...
+2024-05-27 12:33:32 - HikariPool-1 - Shutdown completed.
+2024-05-27 12:33:32 - Stopping service [Tomcat]
+2024-05-27 12:33:32 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-27 12:33:32 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationSuccessHandler' defined in class path resource [hello/hellospring/SecurityConfig.class]: Initialization of bean failed; nested exception is org.springframework.aop.framework.AopConfigException: Unexpected AOP exception; nested exception is java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "cause" is null
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:893)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at hello.hellospring.HelloSpringApplication.main(HelloSpringApplication.java:10)
+Caused by: org.springframework.aop.framework.AopConfigException: Unexpected AOP exception; nested exception is java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "cause" is null
+	at org.springframework.aop.framework.CglibAopProxy.getProxy(CglibAopProxy.java:214)
+	at org.springframework.aop.framework.ProxyFactory.getProxy(ProxyFactory.java:110)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.createProxy(AbstractAutoProxyCreator.java:471)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:350)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:299)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 16 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "cause" is null
+	at org.springframework.cglib.core.CodeGenerationException.<init>(CodeGenerationException.java:25)
+	at org.springframework.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:567)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:363)
+	at org.springframework.cglib.proxy.Enhancer.generate(Enhancer.java:585)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:110)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:108)
+	at org.springframework.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
+	at org.springframework.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:134)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:319)
+	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:572)
+	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:419)
+	at org.springframework.aop.framework.ObjenesisCglibAopProxy.createProxyClassAndInstance(ObjenesisCglibAopProxy.java:57)
+	at org.springframework.aop.framework.CglibAopProxy.getProxy(CglibAopProxy.java:205)
+	... 23 common frames omitted
+2024-05-27 12:34:16 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 11732 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 12:34:16 - No active profile set, falling back to default profiles: default
+2024-05-27 12:34:17 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 12:34:17 - Finished Spring Data repository scanning in 84ms. Found 1 JPA repository interfaces.
+2024-05-27 12:34:19 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 12:34:19 - Starting service [Tomcat]
+2024-05-27 12:34:19 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 12:34:19 - Initializing Spring embedded WebApplicationContext
+2024-05-27 12:34:19 - Root WebApplicationContext: initialization completed in 2243 ms
+2024-05-27 12:34:19 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 12:34:19 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 12:34:19 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 12:34:19 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 12:34:20 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 12:34:20 - HikariPool-1 - Starting...
+2024-05-27 12:34:20 - HikariPool-1 - Start completed.
+2024-05-27 12:34:20 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 12:34:21 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 12:34:21 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 12:34:22 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@539316bb, org.springframework.security.web.context.SecurityContextPersistenceFilter@660b1a9d, org.springframework.security.web.header.HeaderWriterFilter@532dacf5, org.springframework.security.web.csrf.CsrfFilter@270d5060, org.springframework.security.web.authentication.logout.LogoutFilter@104a287c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3a45afd4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d6b532f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@661e279d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d1a859c, org.springframework.security.web.session.SessionManagementFilter@6d31f106, org.springframework.security.web.access.ExceptionTranslationFilter@34aa8b61, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2dcd0e41]
+2024-05-27 12:34:22 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationSuccessHandler' defined in class path resource [hello/hellospring/SecurityConfig.class]: Initialization of bean failed; nested exception is org.springframework.aop.framework.AopConfigException: Unexpected AOP exception; nested exception is java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "cause" is null
+2024-05-27 12:34:22 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 12:34:22 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 12:34:22 - HikariPool-1 - Shutdown initiated...
+2024-05-27 12:34:22 - HikariPool-1 - Shutdown completed.
+2024-05-27 12:34:22 - Stopping service [Tomcat]
+2024-05-27 12:34:22 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-27 12:34:22 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationSuccessHandler' defined in class path resource [hello/hellospring/SecurityConfig.class]: Initialization of bean failed; nested exception is org.springframework.aop.framework.AopConfigException: Unexpected AOP exception; nested exception is java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "cause" is null
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:893)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at hello.hellospring.HelloSpringApplication.main(HelloSpringApplication.java:10)
+Caused by: org.springframework.aop.framework.AopConfigException: Unexpected AOP exception; nested exception is java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "cause" is null
+	at org.springframework.aop.framework.CglibAopProxy.getProxy(CglibAopProxy.java:214)
+	at org.springframework.aop.framework.ProxyFactory.getProxy(ProxyFactory.java:110)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.createProxy(AbstractAutoProxyCreator.java:471)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:350)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:299)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 16 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "cause" is null
+	at org.springframework.cglib.core.CodeGenerationException.<init>(CodeGenerationException.java:25)
+	at org.springframework.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:567)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:363)
+	at org.springframework.cglib.proxy.Enhancer.generate(Enhancer.java:585)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:110)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:108)
+	at org.springframework.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
+	at org.springframework.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:134)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:319)
+	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:572)
+	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:419)
+	at org.springframework.aop.framework.ObjenesisCglibAopProxy.createProxyClassAndInstance(ObjenesisCglibAopProxy.java:57)
+	at org.springframework.aop.framework.CglibAopProxy.getProxy(CglibAopProxy.java:205)
+	... 23 common frames omitted
+2024-05-27 12:39:28 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 10380 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 12:39:28 - No active profile set, falling back to default profiles: default
+2024-05-27 12:39:30 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 12:39:30 - Finished Spring Data repository scanning in 77ms. Found 1 JPA repository interfaces.
+2024-05-27 12:39:31 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 12:39:31 - Starting service [Tomcat]
+2024-05-27 12:39:31 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 12:39:31 - Initializing Spring embedded WebApplicationContext
+2024-05-27 12:39:31 - Root WebApplicationContext: initialization completed in 2038 ms
+2024-05-27 12:39:31 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 12:39:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 12:39:31 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 12:39:31 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 12:39:32 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 12:39:32 - HikariPool-1 - Starting...
+2024-05-27 12:39:32 - HikariPool-1 - Start completed.
+2024-05-27 12:39:32 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 12:39:33 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 12:39:33 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 12:39:34 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28554ac8, org.springframework.security.web.context.SecurityContextPersistenceFilter@d6b532f, org.springframework.security.web.header.HeaderWriterFilter@6d31f106, org.springframework.security.web.csrf.CsrfFilter@71567f33, org.springframework.security.web.authentication.logout.LogoutFilter@26874f2c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@74431b9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@112c2930, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38de5daf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72224107, org.springframework.security.web.session.SessionManagementFilter@660b1a9d, org.springframework.security.web.access.ExceptionTranslationFilter@532dacf5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b409a79]
+2024-05-27 12:39:34 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationSuccessHandler' defined in class path resource [hello/hellospring/SecurityConfig.class]: Initialization of bean failed; nested exception is org.springframework.aop.framework.AopConfigException: Unexpected AOP exception; nested exception is java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "cause" is null
+2024-05-27 12:39:34 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 12:39:34 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 12:39:34 - HikariPool-1 - Shutdown initiated...
+2024-05-27 12:39:34 - HikariPool-1 - Shutdown completed.
+2024-05-27 12:39:34 - Stopping service [Tomcat]
+2024-05-27 12:39:34 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-27 12:39:34 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationSuccessHandler' defined in class path resource [hello/hellospring/SecurityConfig.class]: Initialization of bean failed; nested exception is org.springframework.aop.framework.AopConfigException: Unexpected AOP exception; nested exception is java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "cause" is null
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:893)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at hello.hellospring.HelloSpringApplication.main(HelloSpringApplication.java:10)
+Caused by: org.springframework.aop.framework.AopConfigException: Unexpected AOP exception; nested exception is java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "cause" is null
+	at org.springframework.aop.framework.CglibAopProxy.getProxy(CglibAopProxy.java:214)
+	at org.springframework.aop.framework.ProxyFactory.getProxy(ProxyFactory.java:110)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.createProxy(AbstractAutoProxyCreator.java:471)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:350)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:299)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 16 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "cause" is null
+	at org.springframework.cglib.core.CodeGenerationException.<init>(CodeGenerationException.java:25)
+	at org.springframework.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:567)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:363)
+	at org.springframework.cglib.proxy.Enhancer.generate(Enhancer.java:585)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:110)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:108)
+	at org.springframework.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
+	at org.springframework.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:134)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:319)
+	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:572)
+	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:419)
+	at org.springframework.aop.framework.ObjenesisCglibAopProxy.createProxyClassAndInstance(ObjenesisCglibAopProxy.java:57)
+	at org.springframework.aop.framework.CglibAopProxy.getProxy(CglibAopProxy.java:205)
+	... 23 common frames omitted
+2024-05-27 12:39:44 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 11828 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 12:39:44 - No active profile set, falling back to default profiles: default
+2024-05-27 12:39:45 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 12:39:46 - Finished Spring Data repository scanning in 79ms. Found 1 JPA repository interfaces.
+2024-05-27 12:39:47 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 12:39:47 - Starting service [Tomcat]
+2024-05-27 12:39:47 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 12:39:47 - Initializing Spring embedded WebApplicationContext
+2024-05-27 12:39:47 - Root WebApplicationContext: initialization completed in 2052 ms
+2024-05-27 12:39:47 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 12:39:47 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 12:39:47 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 12:39:47 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 12:39:48 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 12:39:48 - HikariPool-1 - Starting...
+2024-05-27 12:39:48 - HikariPool-1 - Start completed.
+2024-05-27 12:39:48 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 12:39:49 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 12:39:49 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 12:39:50 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45b7c97f, org.springframework.security.web.context.SecurityContextPersistenceFilter@1a497286, org.springframework.security.web.header.HeaderWriterFilter@722787b5, org.springframework.security.web.csrf.CsrfFilter@19ae36f4, org.springframework.security.web.authentication.logout.LogoutFilter@51fe7f15, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@dc1fadd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@120350eb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b31af02, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c212536, org.springframework.security.web.session.SessionManagementFilter@8b41ad, org.springframework.security.web.access.ExceptionTranslationFilter@1e721583, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e74fd84]
+2024-05-27 12:39:51 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 12:39:51 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 12:39:51 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 12:39:51 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 12:39:51 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 12:39:52 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 12:39:52 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 12:39:52 - Spring Data repositories initialized!
+2024-05-27 12:39:52 - Started HelloSpringApplication in 7.731 seconds (JVM running for 8.202)
+2024-05-27 12:39:59 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 12:39:59 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 12:39:59 - Detected StandardServletMultipartResolver
+2024-05-27 12:39:59 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 12:39:59 - Completed initialization in 8 ms
+2024-05-27 12:39:59 - GET "/login?error", parameters={masked}
+2024-05-27 12:39:59 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 12:39:59 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 12:39:59 - Completed 200 OK
+2024-05-27 12:39:59 - GET "/login?error", parameters={masked}
+2024-05-27 12:39:59 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 12:39:59 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 12:39:59 - Completed 200 OK
+2024-05-27 12:39:59 - GET "/login?error", parameters={masked}
+2024-05-27 12:39:59 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 12:39:59 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 12:39:59 - Completed 200 OK
+2024-05-27 12:40:00 - GET "/login?error", parameters={masked}
+2024-05-27 12:40:00 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 12:40:00 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 12:40:00 - Completed 200 OK
+2024-05-27 12:40:01 - GET "/login?error", parameters={masked}
+2024-05-27 12:40:01 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 12:40:01 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 12:40:01 - Completed 200 OK
+2024-05-27 12:40:02 - GET "/login?error", parameters={masked}
+2024-05-27 12:40:02 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 12:40:02 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 12:40:02 - Completed 200 OK
+2024-05-27 12:40:03 - GET "/login?error", parameters={masked}
+2024-05-27 12:40:03 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 12:40:03 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 12:40:03 - Completed 200 OK
+2024-05-27 12:56:18 - GET "/login?error", parameters={masked}
+2024-05-27 12:56:18 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 12:56:18 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 12:56:18 - Completed 200 OK
+2024-05-27 12:56:19 - GET "/login?error", parameters={masked}
+2024-05-27 12:56:19 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 12:56:19 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 12:56:19 - Completed 200 OK
+2024-05-27 12:56:24 - GET "/join", parameters={}
+2024-05-27 12:56:24 - Mapped to hello.hellospring.controller.HomeController#join(Model)
+2024-05-27 12:56:24 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 12:56:24 - Completed 200 OK
+2024-05-27 12:57:34 - POST "/join", parameters={masked}
+2024-05-27 12:57:34 - Mapped to hello.hellospring.controller.HomeController#registerUser(Member, BindingResult)
+2024-05-27 12:57:35 - SQL Error: 23505, SQLState: 23505
+2024-05-27 12:57:35 - Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.MEMBERS(ID) ( /* key:5 */ CAST(5 AS BIGINT), FALSE, DATE '1988-03-14', '010-5678-9012', 'carol.white@example.com', 'F', 'Carol White', 'password654', 'user', '1234', NULL)"; SQL statement:
+insert into members (accept, birthdate, contact, email, gender, name, password, pw, role, username, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-200]
+2024-05-27 12:57:35 - Failed to complete request: org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint ["PRIMARY KEY ON PUBLIC.MEMBERS(ID) ( /* key:5 */ CAST(5 AS BIGINT), FALSE, DATE '1988-03-14', '010-5678-9012', 'carol.white@example.com', 'F', 'Carol White', 'password654', 'user', '1234', NULL)"; SQL statement:
+insert into members (accept, birthdate, contact, email, gender, name, password, pw, role, username, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2024-05-27 12:57:35 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint ["PRIMARY KEY ON PUBLIC.MEMBERS(ID) ( /* key:5 */ CAST(5 AS BIGINT), FALSE, DATE '1988-03-14', '010-5678-9012', 'carol.white@example.com', 'F', 'Carol White', 'password654', 'user', '1234', NULL)"; SQL statement:
+insert into members (accept, birthdate, contact, email, gender, name, password, pw, role, username, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.MEMBERS(ID) ( /* key:5 */ CAST(5 AS BIGINT), FALSE, DATE '1988-03-14', '010-5678-9012', 'carol.white@example.com', 'F', 'Carol White', 'password654', 'user', '1234', NULL)"; SQL statement:
+insert into members (accept, birthdate, contact, email, gender, name, password, pw, role, username, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:459)
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:611)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:191)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:152)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3254)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3779)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:348)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:102)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1360)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:451)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3210)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2378)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:447)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:534)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:632)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:386)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at hello.hellospring.service.MemberService$$EnhancerBySpringCGLIB$$7efac22b.registerUser(<generated>)
+	at hello.hellospring.controller.HomeController.registerUser(HomeController.java:49)
+	at hello.hellospring.controller.HomeController$$FastClassBySpringCGLIB$$c162eaa2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at hello.hellospring.aop.TimeTraceAop.execute(TimeTraceAop.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at hello.hellospring.controller.HomeController$$EnhancerBySpringCGLIB$$977ac7bf.registerUser(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:141)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-05-27 12:57:35 - "ERROR" dispatch for POST "/error", parameters={masked}
+2024-05-27 12:57:35 - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2024-05-27 12:57:35 - Selected 'text/html' given [text/html, text/html;q=0.8]
+2024-05-27 12:57:35 - Exiting from "ERROR" dispatch, status 500
+2024-05-27 12:57:46 - GET "/join", parameters={}
+2024-05-27 12:57:46 - Mapped to hello.hellospring.controller.HomeController#join(Model)
+2024-05-27 12:57:46 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 12:57:46 - Completed 200 OK
+2024-05-27 13:06:00 - GET "/login?error", parameters={masked}
+2024-05-27 13:06:00 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 13:06:00 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 13:06:00 - Completed 200 OK
+2024-05-27 13:06:08 - GET "/login?error", parameters={masked}
+2024-05-27 13:06:08 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 13:06:08 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 13:06:08 - Completed 200 OK
+2024-05-27 13:52:26 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 13:52:26 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 13:52:26 - HikariPool-1 - Shutdown initiated...
+2024-05-27 13:52:26 - HikariPool-1 - Shutdown completed.
+2024-05-27 13:52:30 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 3924 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 13:52:30 - No active profile set, falling back to default profiles: default
+2024-05-27 13:52:31 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 13:52:32 - Finished Spring Data repository scanning in 78ms. Found 1 JPA repository interfaces.
+2024-05-27 13:52:33 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 13:52:33 - Starting service [Tomcat]
+2024-05-27 13:52:33 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 13:52:33 - Initializing Spring embedded WebApplicationContext
+2024-05-27 13:52:33 - Root WebApplicationContext: initialization completed in 2140 ms
+2024-05-27 13:52:33 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 13:52:33 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 13:52:33 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 13:52:33 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 13:52:34 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 13:52:34 - HikariPool-1 - Starting...
+2024-05-27 13:52:34 - HikariPool-1 - Start completed.
+2024-05-27 13:52:34 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 13:52:35 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 13:52:35 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 13:52:36 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33627576, org.springframework.security.web.context.SecurityContextPersistenceFilter@3181d4de, org.springframework.security.web.header.HeaderWriterFilter@147e0734, org.springframework.security.web.csrf.CsrfFilter@237b2852, org.springframework.security.web.authentication.logout.LogoutFilter@660b1a9d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@51fe7f15, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@639c7f9c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@987a0bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27bc1d44, org.springframework.security.web.session.SessionManagementFilter@7b8aebd0, org.springframework.security.web.access.ExceptionTranslationFilter@60b616c8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@203b953c]
+2024-05-27 13:52:36 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 13:52:37 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 13:52:37 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 13:52:37 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 13:52:37 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 13:52:37 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 13:52:37 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 13:52:37 - Spring Data repositories initialized!
+2024-05-27 13:52:37 - Started HelloSpringApplication in 7.514 seconds (JVM running for 7.989)
+2024-05-27 13:52:49 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 13:52:49 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 13:52:49 - Detected StandardServletMultipartResolver
+2024-05-27 13:52:49 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 13:52:49 - Completed initialization in 7 ms
+2024-05-27 13:52:49 - GET "/login", parameters={}
+2024-05-27 13:52:49 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 13:52:49 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 13:52:49 - Completed 200 OK
+2024-05-27 14:02:41 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 14:02:41 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 14:02:41 - HikariPool-1 - Shutdown initiated...
+2024-05-27 14:02:41 - HikariPool-1 - Shutdown completed.
+2024-05-27 14:02:45 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 1764 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 14:02:45 - No active profile set, falling back to default profiles: default
+2024-05-27 14:02:46 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 14:02:46 - Finished Spring Data repository scanning in 79ms. Found 1 JPA repository interfaces.
+2024-05-27 14:02:47 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 14:02:47 - Starting service [Tomcat]
+2024-05-27 14:02:47 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 14:02:47 - Initializing Spring embedded WebApplicationContext
+2024-05-27 14:02:47 - Root WebApplicationContext: initialization completed in 2136 ms
+2024-05-27 14:02:47 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 14:02:48 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 14:02:48 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 14:02:48 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 14:02:48 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 14:02:48 - HikariPool-1 - Starting...
+2024-05-27 14:02:49 - HikariPool-1 - Start completed.
+2024-05-27 14:02:49 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 14:02:50 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 14:02:50 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 14:02:51 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27bc1d44, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f64d9cb, org.springframework.security.web.header.HeaderWriterFilter@2bdab835, org.springframework.security.web.csrf.CsrfFilter@448cdb47, org.springframework.security.web.authentication.logout.LogoutFilter@6fb0261e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5873f3f0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@270d5060, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f949ab9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1af677f8, org.springframework.security.web.session.SessionManagementFilter@55222ee9, org.springframework.security.web.access.ExceptionTranslationFilter@3962ec84, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@730bea0]
+2024-05-27 14:02:51 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 14:02:51 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 14:02:51 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 14:02:51 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 14:02:51 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 14:02:52 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 14:02:52 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 14:02:52 - Spring Data repositories initialized!
+2024-05-27 14:02:52 - Started HelloSpringApplication in 7.591 seconds (JVM running for 8.069)
+2024-05-27 14:06:57 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 14:06:57 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 14:06:57 - HikariPool-1 - Shutdown initiated...
+2024-05-27 14:06:57 - HikariPool-1 - Shutdown completed.
+2024-05-27 14:07:01 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 18940 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 14:07:01 - No active profile set, falling back to default profiles: default
+2024-05-27 14:07:02 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'memberService' defined in class path resource [hello/hellospring/SpringConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=springConfig; factoryMethodName=memberService; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [hello/hellospring/SpringConfig.class]] for bean 'memberService': There is already [Generic bean: class [hello.hellospring.service.MemberService]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\Users\JANG\gittest\hello-spring\out\production\classes\hello\hellospring\service\MemberService.class]] bound.
+2024-05-27 14:07:02 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-27 14:07:02 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'memberService', defined in class path resource [hello/hellospring/SpringConfig.class], could not be registered. A bean with that name has already been defined in file [C:\Users\JANG\gittest\hello-spring\out\production\classes\hello\hellospring\service\MemberService.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2024-05-27 14:13:57 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 29284 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 14:13:57 - No active profile set, falling back to default profiles: default
+2024-05-27 14:13:58 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 14:13:58 - Finished Spring Data repository scanning in 80ms. Found 1 JPA repository interfaces.
+2024-05-27 14:13:59 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 14:13:59 - Starting service [Tomcat]
+2024-05-27 14:13:59 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 14:14:00 - Initializing Spring embedded WebApplicationContext
+2024-05-27 14:14:00 - Root WebApplicationContext: initialization completed in 2179 ms
+2024-05-27 14:14:00 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 14:14:00 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 14:14:00 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 14:14:00 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 14:14:01 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 14:14:01 - HikariPool-1 - Starting...
+2024-05-27 14:14:01 - HikariPool-1 - Start completed.
+2024-05-27 14:14:01 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 14:14:02 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 14:14:02 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 14:14:03 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c16528d, org.springframework.security.web.context.SecurityContextPersistenceFilter@5f56424d, org.springframework.security.web.header.HeaderWriterFilter@41fc0084, org.springframework.security.web.csrf.CsrfFilter@ac4915e, org.springframework.security.web.authentication.logout.LogoutFilter@639c7f9c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@120350eb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@448cdb47, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5203c80f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e45a357, org.springframework.security.web.session.SessionManagementFilter@3ec9f8d, org.springframework.security.web.access.ExceptionTranslationFilter@7d47dfed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79f5a6ed]
+2024-05-27 14:14:03 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 14:14:04 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 14:14:04 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 14:14:04 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 14:14:04 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 14:14:04 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 14:14:04 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 14:14:04 - Spring Data repositories initialized!
+2024-05-27 14:14:04 - Started HelloSpringApplication in 7.742 seconds (JVM running for 8.218)
+2024-05-27 14:14:08 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 14:14:08 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 14:14:08 - Detected StandardServletMultipartResolver
+2024-05-27 14:14:08 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 14:14:08 - Completed initialization in 11 ms
+2024-05-27 14:14:08 - GET "/login", parameters={}
+2024-05-27 14:14:08 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 14:14:08 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 14:14:08 - Completed 200 OK
+2024-05-27 14:14:18 - GET "/login?error", parameters={masked}
+2024-05-27 14:14:18 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 14:14:18 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 14:14:18 - Completed 200 OK
+2024-05-27 14:29:10 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 14:29:10 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 14:29:10 - HikariPool-1 - Shutdown initiated...
+2024-05-27 14:29:10 - HikariPool-1 - Shutdown completed.
+2024-05-27 14:29:14 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 14136 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 14:29:14 - No active profile set, falling back to default profiles: default
+2024-05-27 14:29:15 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 14:29:15 - Finished Spring Data repository scanning in 77ms. Found 1 JPA repository interfaces.
+2024-05-27 14:29:16 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 14:29:16 - Starting service [Tomcat]
+2024-05-27 14:29:16 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 14:29:16 - Initializing Spring embedded WebApplicationContext
+2024-05-27 14:29:16 - Root WebApplicationContext: initialization completed in 2128 ms
+2024-05-27 14:29:17 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 14:29:17 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 14:29:17 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 14:29:17 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 14:29:17 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 14:29:18 - HikariPool-1 - Starting...
+2024-05-27 14:29:18 - HikariPool-1 - Start completed.
+2024-05-27 14:29:18 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 14:29:19 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 14:29:19 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 14:29:20 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1cba0321, org.springframework.security.web.context.SecurityContextPersistenceFilter@3719360c, org.springframework.security.web.header.HeaderWriterFilter@4c04216f, org.springframework.security.web.csrf.CsrfFilter@44dd0d38, org.springframework.security.web.authentication.logout.LogoutFilter@621624b1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7a55fb81, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3855d9b2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@da09250, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@795f6681, org.springframework.security.web.session.SessionManagementFilter@1f949ab9, org.springframework.security.web.access.ExceptionTranslationFilter@3cf55e0c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7574d4ad]
+2024-05-27 14:29:20 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 14:29:20 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 14:29:20 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 14:29:20 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 14:29:20 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 14:29:21 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 14:29:21 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 14:29:21 - Spring Data repositories initialized!
+2024-05-27 14:29:21 - Started HelloSpringApplication in 7.504 seconds (JVM running for 7.96)
+2024-05-27 14:31:11 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 14:31:11 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 14:31:11 - HikariPool-1 - Shutdown initiated...
+2024-05-27 14:31:11 - HikariPool-1 - Shutdown completed.
+2024-05-27 14:32:25 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 9508 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 14:32:25 - No active profile set, falling back to default profiles: default
+2024-05-27 14:32:26 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 14:32:26 - Finished Spring Data repository scanning in 79ms. Found 1 JPA repository interfaces.
+2024-05-27 14:32:27 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 14:32:27 - Starting service [Tomcat]
+2024-05-27 14:32:27 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 14:32:27 - Initializing Spring embedded WebApplicationContext
+2024-05-27 14:32:27 - Root WebApplicationContext: initialization completed in 2149 ms
+2024-05-27 14:32:27 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 14:32:27 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 14:32:28 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 14:32:28 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 14:32:28 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 14:32:28 - HikariPool-1 - Starting...
+2024-05-27 14:32:29 - HikariPool-1 - Start completed.
+2024-05-27 14:32:29 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 14:32:30 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 14:32:30 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 14:32:30 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3214bad, org.springframework.security.web.context.SecurityContextPersistenceFilter@5f3b84bd, org.springframework.security.web.header.HeaderWriterFilter@4357524b, org.springframework.security.web.csrf.CsrfFilter@28e7bb31, org.springframework.security.web.authentication.logout.LogoutFilter@36ad5f2a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@32da97fd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e191150, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45eab322, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52d7ab79, org.springframework.security.web.session.SessionManagementFilter@64dc86c6, org.springframework.security.web.access.ExceptionTranslationFilter@59d5a6fd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4fc6e776]
+2024-05-27 14:32:31 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 14:32:31 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 14:32:31 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 14:32:31 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 14:32:31 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 14:32:32 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 14:32:32 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 14:32:32 - Spring Data repositories initialized!
+2024-05-27 14:32:32 - Started HelloSpringApplication in 7.695 seconds (JVM running for 8.184)
+2024-05-27 14:32:43 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 14:32:43 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 14:32:43 - Detected StandardServletMultipartResolver
+2024-05-27 14:32:43 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 14:32:43 - Completed initialization in 9 ms
+2024-05-27 14:32:43 - GET "/login?error", parameters={masked}
+2024-05-27 14:32:43 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 14:32:43 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 14:32:43 - Completed 200 OK
+2024-05-27 14:34:17 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 14:34:17 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 14:34:17 - HikariPool-1 - Shutdown initiated...
+2024-05-27 14:34:17 - HikariPool-1 - Shutdown completed.
+2024-05-27 15:39:03 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 8244 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 15:39:03 - No active profile set, falling back to default profiles: default
+2024-05-27 15:39:04 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 15:39:04 - Finished Spring Data repository scanning in 80ms. Found 1 JPA repository interfaces.
+2024-05-27 15:39:05 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 15:39:05 - Starting service [Tomcat]
+2024-05-27 15:39:05 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 15:39:06 - Initializing Spring embedded WebApplicationContext
+2024-05-27 15:39:06 - Root WebApplicationContext: initialization completed in 2100 ms
+2024-05-27 15:39:06 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 15:39:06 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 15:39:06 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 15:39:06 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 15:39:07 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 15:39:07 - HikariPool-1 - Starting...
+2024-05-27 15:39:07 - HikariPool-1 - Start completed.
+2024-05-27 15:39:07 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 15:39:08 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 15:39:08 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 15:39:09 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b44318, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b01c689, org.springframework.security.web.header.HeaderWriterFilter@5f56424d, org.springframework.security.web.csrf.CsrfFilter@23648d2d, org.springframework.security.web.authentication.logout.LogoutFilter@71369e1a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4217bce6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7336fd8f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44dd0d38, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e807e2, org.springframework.security.web.session.SessionManagementFilter@448cdb47, org.springframework.security.web.access.ExceptionTranslationFilter@3ec9f8d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@541d4d9f]
+2024-05-27 15:39:09 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 15:39:09 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 15:39:09 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 15:39:10 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 15:39:10 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 15:39:10 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 15:39:10 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 15:39:10 - Spring Data repositories initialized!
+2024-05-27 15:39:10 - Started HelloSpringApplication in 7.552 seconds (JVM running for 8.019)
+2024-05-27 15:39:19 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 15:39:19 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 15:39:19 - Detected StandardServletMultipartResolver
+2024-05-27 15:39:19 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 15:39:19 - Completed initialization in 8 ms
+2024-05-27 15:39:19 - GET "/login", parameters={}
+2024-05-27 15:39:19 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 15:39:19 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 15:39:19 - Completed 200 OK
+2024-05-27 15:40:31 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 15:40:31 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 15:40:31 - HikariPool-1 - Shutdown initiated...
+2024-05-27 15:40:31 - HikariPool-1 - Shutdown completed.
+2024-05-27 15:40:35 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 12800 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 15:40:35 - No active profile set, falling back to default profiles: default
+2024-05-27 15:40:36 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 15:40:36 - Finished Spring Data repository scanning in 80ms. Found 1 JPA repository interfaces.
+2024-05-27 15:40:37 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 15:40:37 - Starting service [Tomcat]
+2024-05-27 15:40:37 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 15:40:37 - Initializing Spring embedded WebApplicationContext
+2024-05-27 15:40:37 - Root WebApplicationContext: initialization completed in 2080 ms
+2024-05-27 15:40:38 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 15:40:38 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 15:40:38 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 15:40:38 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 15:40:39 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 15:40:39 - HikariPool-1 - Starting...
+2024-05-27 15:40:39 - HikariPool-1 - Start completed.
+2024-05-27 15:40:39 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 15:40:40 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 15:40:40 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 15:40:41 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f2fb225, org.springframework.security.web.context.SecurityContextPersistenceFilter@2cae5fa7, org.springframework.security.web.header.HeaderWriterFilter@3855d9b2, org.springframework.security.web.csrf.CsrfFilter@147e0734, org.springframework.security.web.authentication.logout.LogoutFilter@13ca16bf, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2dcd0e41, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d7b001b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f4d01b6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1883871b, org.springframework.security.web.session.SessionManagementFilter@47a3d56a, org.springframework.security.web.access.ExceptionTranslationFilter@3719360c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1af677f8]
+2024-05-27 15:40:41 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 15:40:41 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 15:40:41 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 15:40:41 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 15:40:41 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 15:40:42 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 15:40:42 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 15:40:42 - Spring Data repositories initialized!
+2024-05-27 15:40:42 - Started HelloSpringApplication in 7.761 seconds (JVM running for 8.282)
+2024-05-27 15:40:52 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 15:40:52 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 15:40:52 - Detected StandardServletMultipartResolver
+2024-05-27 15:40:52 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 15:40:52 - Completed initialization in 8 ms
+2024-05-27 15:40:52 - GET "/login", parameters={}
+2024-05-27 15:40:52 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 15:40:52 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 15:40:52 - Completed 200 OK
+2024-05-27 15:41:31 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 15:41:31 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 15:41:31 - HikariPool-1 - Shutdown initiated...
+2024-05-27 15:41:31 - HikariPool-1 - Shutdown completed.
+2024-05-27 15:41:35 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 23740 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 15:41:35 - No active profile set, falling back to default profiles: default
+2024-05-27 15:41:36 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 15:41:36 - Finished Spring Data repository scanning in 79ms. Found 1 JPA repository interfaces.
+2024-05-27 15:41:37 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 15:41:37 - Starting service [Tomcat]
+2024-05-27 15:41:37 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 15:41:37 - Initializing Spring embedded WebApplicationContext
+2024-05-27 15:41:37 - Root WebApplicationContext: initialization completed in 2252 ms
+2024-05-27 15:41:38 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 15:41:38 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 15:41:38 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 15:41:38 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 15:41:38 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 15:41:39 - HikariPool-1 - Starting...
+2024-05-27 15:41:39 - HikariPool-1 - Start completed.
+2024-05-27 15:41:39 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 15:41:40 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 15:41:40 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 15:41:41 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a3cf878, org.springframework.security.web.context.SecurityContextPersistenceFilter@1815577b, org.springframework.security.web.header.HeaderWriterFilter@3181d4de, org.springframework.security.web.csrf.CsrfFilter@51424203, org.springframework.security.web.authentication.logout.LogoutFilter@112c2930, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@41f964f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71369e1a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3afca2c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d2d8846, org.springframework.security.web.session.SessionManagementFilter@639c7f9c, org.springframework.security.web.access.ExceptionTranslationFilter@7b8aebd0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b1252c8]
+2024-05-27 15:41:41 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 15:41:41 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 15:41:41 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 15:41:41 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 15:41:41 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 15:41:42 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 15:41:42 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 15:41:42 - Spring Data repositories initialized!
+2024-05-27 15:41:42 - Started HelloSpringApplication in 7.963 seconds (JVM running for 8.433)
+2024-05-27 15:42:08 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 15:42:08 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 15:42:08 - Detected StandardServletMultipartResolver
+2024-05-27 15:42:08 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 15:42:08 - Completed initialization in 8 ms
+2024-05-27 15:42:08 - GET "/login", parameters={}
+2024-05-27 15:42:08 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 15:42:08 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 15:42:08 - Completed 200 OK
+2024-05-27 15:45:10 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 15:45:10 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 15:45:10 - HikariPool-1 - Shutdown initiated...
+2024-05-27 15:45:10 - HikariPool-1 - Shutdown completed.
+2024-05-27 15:45:14 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 13976 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 15:45:14 - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2024-05-27 15:45:14 - No active profile set, falling back to default profiles: default
+2024-05-27 15:45:15 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 15:45:15 - Finished Spring Data repository scanning in 76ms. Found 1 JPA repository interfaces.
+2024-05-27 15:45:16 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 15:45:16 - Starting service [Tomcat]
+2024-05-27 15:45:16 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 15:45:16 - Initializing Spring embedded WebApplicationContext
+2024-05-27 15:45:16 - Root WebApplicationContext: initialization completed in 2108 ms
+2024-05-27 15:45:17 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 15:45:17 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 15:45:17 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 15:45:17 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 15:45:17 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 15:45:18 - HikariPool-1 - Starting...
+2024-05-27 15:45:18 - HikariPool-1 - Start completed.
+2024-05-27 15:45:18 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 15:45:19 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 15:45:19 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 15:45:20 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5940b14e, org.springframework.security.web.context.SecurityContextPersistenceFilter@5a7b6b75, org.springframework.security.web.header.HeaderWriterFilter@ee96866, org.springframework.security.web.csrf.CsrfFilter@852ef8d, org.springframework.security.web.authentication.logout.LogoutFilter@38de5daf, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1af677f8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3afca2c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@532dacf5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1cba0321, org.springframework.security.web.session.SessionManagementFilter@987a0bb, org.springframework.security.web.access.ExceptionTranslationFilter@71369e1a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@652e345]
+2024-05-27 15:45:20 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 15:45:20 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 15:45:20 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 15:45:20 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 15:45:20 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 15:45:21 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 15:45:21 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 15:45:21 - Spring Data repositories initialized!
+2024-05-27 15:45:21 - Started HelloSpringApplication in 7.794 seconds (JVM running for 8.277)
+2024-05-27 15:45:39 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 15:45:39 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 15:45:39 - Detected StandardServletMultipartResolver
+2024-05-27 15:45:39 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 15:45:39 - Completed initialization in 8 ms
+2024-05-27 15:45:39 - GET "/login", parameters={}
+2024-05-27 15:45:39 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 15:45:40 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 15:45:40 - Completed 200 OK
+2024-05-27 15:45:47 - GET "/login?error", parameters={masked}
+2024-05-27 15:45:47 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 15:45:47 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 15:45:47 - Completed 200 OK
+2024-05-27 15:51:07 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 15:51:07 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 15:51:07 - HikariPool-1 - Shutdown initiated...
+2024-05-27 15:51:07 - HikariPool-1 - Shutdown completed.
+2024-05-27 15:51:12 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 30796 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 15:51:12 - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2024-05-27 15:51:12 - No active profile set, falling back to default profiles: default
+2024-05-27 15:51:13 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 15:51:13 - Finished Spring Data repository scanning in 79ms. Found 1 JPA repository interfaces.
+2024-05-27 15:51:14 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 15:51:14 - Starting service [Tomcat]
+2024-05-27 15:51:14 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 15:51:14 - Initializing Spring embedded WebApplicationContext
+2024-05-27 15:51:14 - Root WebApplicationContext: initialization completed in 2246 ms
+2024-05-27 15:51:14 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 15:51:15 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 15:51:15 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 15:51:15 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 15:51:15 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 15:51:15 - HikariPool-1 - Starting...
+2024-05-27 15:51:16 - HikariPool-1 - Start completed.
+2024-05-27 15:51:16 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 15:51:17 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 15:51:17 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 15:51:18 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51fe7f15, org.springframework.security.web.context.SecurityContextPersistenceFilter@44dd0d38, org.springframework.security.web.header.HeaderWriterFilter@5203c80f, org.springframework.security.web.csrf.CsrfFilter@221ca495, org.springframework.security.web.authentication.logout.LogoutFilter@39f42d0e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5b44318, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@539fc5d1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3181d4de, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5873f3f0, org.springframework.security.web.session.SessionManagementFilter@721bf7ad, org.springframework.security.web.access.ExceptionTranslationFilter@550c973e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@643ecfef]
+2024-05-27 15:51:18 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 15:51:18 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 15:51:18 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 15:51:18 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 15:51:18 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 15:51:19 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 15:51:19 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 15:51:19 - Spring Data repositories initialized!
+2024-05-27 15:51:19 - Started HelloSpringApplication in 7.787 seconds (JVM running for 8.256)
+2024-05-27 15:51:46 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 15:51:46 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 15:51:46 - Detected StandardServletMultipartResolver
+2024-05-27 15:51:46 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 15:51:46 - Completed initialization in 8 ms
+2024-05-27 15:51:46 - GET "/login?error", parameters={masked}
+2024-05-27 15:51:46 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 15:51:46 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 15:51:46 - Completed 200 OK
+2024-05-27 15:51:53 - GET "/login?error", parameters={masked}
+2024-05-27 15:51:53 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 15:51:53 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 15:51:53 - Completed 200 OK
+2024-05-27 15:53:12 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 15:53:12 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 15:53:12 - HikariPool-1 - Shutdown initiated...
+2024-05-27 15:53:12 - HikariPool-1 - Shutdown completed.
+2024-05-27 15:53:16 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 4352 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 15:53:16 - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2024-05-27 15:53:16 - No active profile set, falling back to default profiles: default
+2024-05-27 15:53:17 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 15:53:17 - Finished Spring Data repository scanning in 75ms. Found 1 JPA repository interfaces.
+2024-05-27 15:53:19 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 15:53:19 - Starting service [Tomcat]
+2024-05-27 15:53:19 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 15:53:19 - Initializing Spring embedded WebApplicationContext
+2024-05-27 15:53:19 - Root WebApplicationContext: initialization completed in 2089 ms
+2024-05-27 15:53:19 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 15:53:19 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 15:53:19 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 15:53:19 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 15:53:20 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 15:53:20 - HikariPool-1 - Starting...
+2024-05-27 15:53:20 - HikariPool-1 - Start completed.
+2024-05-27 15:53:20 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 15:53:21 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 15:53:21 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 15:53:22 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e3283f6, org.springframework.security.web.context.SecurityContextPersistenceFilter@587f4f63, org.springframework.security.web.header.HeaderWriterFilter@6d7b001b, org.springframework.security.web.csrf.CsrfFilter@639c7f9c, org.springframework.security.web.authentication.logout.LogoutFilter@4357524b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@66d3b881, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fb0261e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@733534f9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@539316bb, org.springframework.security.web.session.SessionManagementFilter@da09250, org.springframework.security.web.access.ExceptionTranslationFilter@2cae5fa7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c53c235]
+2024-05-27 15:53:23 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 15:53:23 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 15:53:23 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 15:53:23 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 15:53:23 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 15:53:24 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 15:53:24 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 15:53:24 - Spring Data repositories initialized!
+2024-05-27 15:53:24 - Started HelloSpringApplication in 7.89 seconds (JVM running for 8.367)
+2024-05-27 16:02:52 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 16:02:52 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 16:02:52 - Detected StandardServletMultipartResolver
+2024-05-27 16:02:52 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 16:02:52 - Completed initialization in 8 ms
+2024-05-27 16:02:52 - GET "/login", parameters={}
+2024-05-27 16:02:52 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 16:02:52 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:02:52 - Completed 200 OK
+2024-05-27 16:03:03 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:03:03 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:03:03 - HikariPool-1 - Shutdown initiated...
+2024-05-27 16:03:03 - HikariPool-1 - Shutdown completed.
+2024-05-27 16:03:06 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 11180 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 16:03:06 - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2024-05-27 16:03:06 - No active profile set, falling back to default profiles: default
+2024-05-27 16:03:07 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 16:03:07 - Finished Spring Data repository scanning in 98ms. Found 1 JPA repository interfaces.
+2024-05-27 16:03:08 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 16:03:08 - Starting service [Tomcat]
+2024-05-27 16:03:08 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 16:03:08 - Initializing Spring embedded WebApplicationContext
+2024-05-27 16:03:08 - Root WebApplicationContext: initialization completed in 2407 ms
+2024-05-27 16:03:09 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:03:09 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 16:03:09 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 16:03:09 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 16:03:09 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 16:03:10 - HikariPool-1 - Starting...
+2024-05-27 16:03:10 - HikariPool-1 - Start completed.
+2024-05-27 16:03:10 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 16:03:11 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 16:03:11 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:03:12 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@221b77d7, org.springframework.security.web.context.SecurityContextPersistenceFilter@677cb96e, org.springframework.security.web.header.HeaderWriterFilter@6c995c5d, org.springframework.security.web.csrf.CsrfFilter@541d4d9f, org.springframework.security.web.authentication.logout.LogoutFilter@5940b14e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@563317c1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@19d53ab4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7574d4ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5cd8d029, org.springframework.security.web.session.SessionManagementFilter@730bea0, org.springframework.security.web.access.ExceptionTranslationFilter@5b44318, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65844c96]
+2024-05-27 16:03:13 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 16:03:13 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 16:03:13 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 16:03:13 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 16:03:13 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 16:03:14 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 16:03:14 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 16:03:14 - Spring Data repositories initialized!
+2024-05-27 16:03:14 - Started HelloSpringApplication in 9.062 seconds (JVM running for 9.648)
+2024-05-27 16:03:38 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:03:38 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:03:38 - HikariPool-1 - Shutdown initiated...
+2024-05-27 16:03:38 - HikariPool-1 - Shutdown completed.
+2024-05-27 16:05:35 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 1288 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 16:05:35 - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2024-05-27 16:05:35 - No active profile set, falling back to default profiles: default
+2024-05-27 16:05:36 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 16:05:36 - Finished Spring Data repository scanning in 95ms. Found 1 JPA repository interfaces.
+2024-05-27 16:05:37 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 16:05:37 - Starting service [Tomcat]
+2024-05-27 16:05:37 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 16:05:38 - Initializing Spring embedded WebApplicationContext
+2024-05-27 16:05:38 - Root WebApplicationContext: initialization completed in 2376 ms
+2024-05-27 16:05:38 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:05:38 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 16:05:38 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 16:05:38 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 16:05:39 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 16:05:39 - HikariPool-1 - Starting...
+2024-05-27 16:05:39 - HikariPool-1 - Start completed.
+2024-05-27 16:05:39 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 16:05:40 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 16:05:40 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:05:42 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32a8ca06, org.springframework.security.web.context.SecurityContextPersistenceFilter@19d53ab4, org.springframework.security.web.header.HeaderWriterFilter@730bea0, org.springframework.security.web.csrf.CsrfFilter@48dff674, org.springframework.security.web.authentication.logout.LogoutFilter@795f6681, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6e0d16a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51fe7f15, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@713999c2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e8f2094, org.springframework.security.web.session.SessionManagementFilter@677cb96e, org.springframework.security.web.access.ExceptionTranslationFilter@6c995c5d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4e5c8ef3]
+2024-05-27 16:05:42 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 16:05:42 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 16:05:42 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 16:05:42 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 16:05:42 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 16:05:43 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 16:05:43 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 16:05:43 - Spring Data repositories initialized!
+2024-05-27 16:05:43 - Started HelloSpringApplication in 8.731 seconds (JVM running for 9.328)
+2024-05-27 16:05:43 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 16:05:43 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 16:05:43 - Detected StandardServletMultipartResolver
+2024-05-27 16:05:43 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 16:05:43 - Completed initialization in 18 ms
+2024-05-27 16:05:43 - GET "/login", parameters={}
+2024-05-27 16:05:43 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 16:05:44 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:05:44 - Completed 200 OK
+2024-05-27 16:05:54 - GET "/login?error", parameters={masked}
+2024-05-27 16:05:54 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 16:05:54 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:05:54 - Completed 200 OK
+2024-05-27 16:06:43 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:06:43 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:06:43 - HikariPool-1 - Shutdown initiated...
+2024-05-27 16:06:43 - HikariPool-1 - Shutdown completed.
+2024-05-27 16:10:08 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 22292 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 16:10:08 - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2024-05-27 16:10:08 - No active profile set, falling back to default profiles: default
+2024-05-27 16:10:09 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 16:10:09 - Finished Spring Data repository scanning in 93ms. Found 1 JPA repository interfaces.
+2024-05-27 16:10:10 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 16:10:10 - Starting service [Tomcat]
+2024-05-27 16:10:10 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 16:10:10 - Initializing Spring embedded WebApplicationContext
+2024-05-27 16:10:10 - Root WebApplicationContext: initialization completed in 2110 ms
+2024-05-27 16:10:11 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:10:11 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 16:10:11 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 16:10:11 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 16:10:11 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 16:10:12 - HikariPool-1 - Starting...
+2024-05-27 16:10:12 - HikariPool-1 - Start completed.
+2024-05-27 16:10:12 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 16:10:13 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 16:10:13 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:10:14 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b332439, org.springframework.security.web.context.SecurityContextPersistenceFilter@722787b5, org.springframework.security.web.header.HeaderWriterFilter@216f01, org.springframework.security.web.csrf.CsrfFilter@7f51f588, org.springframework.security.web.authentication.logout.LogoutFilter@677cb96e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4e4894d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8b41ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4217bce6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59262a90, org.springframework.security.web.session.SessionManagementFilter@1e721583, org.springframework.security.web.access.ExceptionTranslationFilter@4044589a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28e94c2]
+2024-05-27 16:10:14 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 16:10:14 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 16:10:14 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 16:10:14 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 16:10:14 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 16:10:15 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 16:10:15 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 16:10:15 - Spring Data repositories initialized!
+2024-05-27 16:10:15 - Started HelloSpringApplication in 7.35 seconds (JVM running for 7.886)
+2024-05-27 16:12:50 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 16:12:50 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 16:12:50 - Detected StandardServletMultipartResolver
+2024-05-27 16:12:50 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 16:12:50 - Completed initialization in 22 ms
+2024-05-27 16:12:50 - GET "/login?error", parameters={masked}
+2024-05-27 16:12:50 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 16:12:50 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:12:51 - Completed 200 OK
+2024-05-27 16:12:58 - GET "/login?error", parameters={masked}
+2024-05-27 16:12:58 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 16:12:58 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:12:58 - Completed 200 OK
+2024-05-27 16:14:12 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:14:12 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:14:12 - HikariPool-1 - Shutdown initiated...
+2024-05-27 16:14:12 - HikariPool-1 - Shutdown completed.
+2024-05-27 16:14:17 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 6580 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 16:14:17 - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2024-05-27 16:14:17 - No active profile set, falling back to default profiles: default
+2024-05-27 16:14:18 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 16:14:18 - Finished Spring Data repository scanning in 81ms. Found 1 JPA repository interfaces.
+2024-05-27 16:14:19 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 16:14:19 - Starting service [Tomcat]
+2024-05-27 16:14:19 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 16:14:19 - Initializing Spring embedded WebApplicationContext
+2024-05-27 16:14:19 - Root WebApplicationContext: initialization completed in 2088 ms
+2024-05-27 16:14:19 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:14:19 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 16:14:19 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 16:14:20 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 16:14:20 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 16:14:20 - HikariPool-1 - Starting...
+2024-05-27 16:14:20 - HikariPool-1 - Start completed.
+2024-05-27 16:14:21 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 16:14:22 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 16:14:22 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:14:22 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@635ff2a5, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d2d8846, org.springframework.security.web.header.HeaderWriterFilter@27bc1d44, org.springframework.security.web.csrf.CsrfFilter@6c995c5d, org.springframework.security.web.authentication.logout.LogoutFilter@3070f3e6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6a5dd083, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61911947, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66d3b881, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55adcf9e, org.springframework.security.web.session.SessionManagementFilter@7a55fb81, org.springframework.security.web.access.ExceptionTranslationFilter@6060146b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@32a8ca06]
+2024-05-27 16:14:23 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 16:14:23 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 16:14:23 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 16:14:23 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 16:14:23 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 16:14:24 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 16:14:24 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 16:14:24 - Spring Data repositories initialized!
+2024-05-27 16:14:24 - Started HelloSpringApplication in 7.651 seconds (JVM running for 8.116)
+2024-05-27 16:16:11 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 16:16:11 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 16:16:11 - Detected StandardServletMultipartResolver
+2024-05-27 16:16:11 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 16:16:11 - Completed initialization in 7 ms
+2024-05-27 16:16:11 - GET "/login", parameters={}
+2024-05-27 16:16:11 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 16:16:11 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:16:11 - Completed 200 OK
+2024-05-27 16:16:48 - GET "/login?error", parameters={masked}
+2024-05-27 16:16:48 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 16:16:48 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:16:48 - Completed 200 OK
+2024-05-27 16:16:57 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:16:57 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:16:57 - HikariPool-1 - Shutdown initiated...
+2024-05-27 16:16:57 - HikariPool-1 - Shutdown completed.
+2024-05-27 16:16:59 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 10100 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 16:16:59 - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2024-05-27 16:16:59 - No active profile set, falling back to default profiles: default
+2024-05-27 16:17:00 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 16:17:00 - Finished Spring Data repository scanning in 83ms. Found 1 JPA repository interfaces.
+2024-05-27 16:17:02 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 16:17:02 - Starting service [Tomcat]
+2024-05-27 16:17:02 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 16:17:02 - Initializing Spring embedded WebApplicationContext
+2024-05-27 16:17:02 - Root WebApplicationContext: initialization completed in 2079 ms
+2024-05-27 16:17:02 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:17:02 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 16:17:02 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 16:17:02 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 16:17:03 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 16:17:03 - HikariPool-1 - Starting...
+2024-05-27 16:17:03 - HikariPool-1 - Start completed.
+2024-05-27 16:17:04 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 16:17:04 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 16:17:04 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:17:06 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59262a90, org.springframework.security.web.context.SecurityContextPersistenceFilter@edb83f8, org.springframework.security.web.header.HeaderWriterFilter@7c901203, org.springframework.security.web.csrf.CsrfFilter@6fb22ae3, org.springframework.security.web.authentication.logout.LogoutFilter@1b1252c8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1de5cc88, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@541d4d9f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@aa752bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78479f2b, org.springframework.security.web.session.SessionManagementFilter@79f5a6ed, org.springframework.security.web.access.ExceptionTranslationFilter@7de35070, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3d40498a]
+2024-05-27 16:17:06 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 16:17:06 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 16:17:06 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 16:17:06 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 16:17:06 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 16:17:07 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 16:17:07 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 16:17:07 - Spring Data repositories initialized!
+2024-05-27 16:17:07 - Started HelloSpringApplication in 7.961 seconds (JVM running for 8.444)
+2024-05-27 16:17:08 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 16:17:08 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 16:17:08 - Detected StandardServletMultipartResolver
+2024-05-27 16:17:08 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 16:17:08 - Completed initialization in 9 ms
+2024-05-27 16:17:08 - GET "/login?error", parameters={masked}
+2024-05-27 16:17:08 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 16:17:08 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:17:09 - Completed 200 OK
+2024-05-27 16:17:17 - GET "/login?error", parameters={masked}
+2024-05-27 16:17:17 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 16:17:17 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:17:17 - Completed 200 OK
+2024-05-27 16:18:18 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:18:18 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:18:18 - HikariPool-1 - Shutdown initiated...
+2024-05-27 16:18:18 - HikariPool-1 - Shutdown completed.
+2024-05-27 16:18:22 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 5004 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 16:18:22 - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2024-05-27 16:18:22 - No active profile set, falling back to default profiles: default
+2024-05-27 16:18:23 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 16:18:23 - Finished Spring Data repository scanning in 78ms. Found 1 JPA repository interfaces.
+2024-05-27 16:18:24 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 16:18:24 - Starting service [Tomcat]
+2024-05-27 16:18:24 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 16:18:24 - Initializing Spring embedded WebApplicationContext
+2024-05-27 16:18:24 - Root WebApplicationContext: initialization completed in 2071 ms
+2024-05-27 16:18:25 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:18:25 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 16:18:25 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 16:18:25 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 16:18:25 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 16:18:26 - HikariPool-1 - Starting...
+2024-05-27 16:18:26 - HikariPool-1 - Start completed.
+2024-05-27 16:18:26 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 16:18:27 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 16:18:27 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:18:28 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d40498a, org.springframework.security.web.context.SecurityContextPersistenceFilter@6df11e91, org.springframework.security.web.header.HeaderWriterFilter@4567fb2b, org.springframework.security.web.csrf.CsrfFilter@5f3b84bd, org.springframework.security.web.authentication.logout.LogoutFilter@643ecfef, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@640c216b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9281d19, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c901203, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14d1737a, org.springframework.security.web.session.SessionManagementFilter@5fd8dd66, org.springframework.security.web.access.ExceptionTranslationFilter@19ae36f4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@45984654]
+2024-05-27 16:18:28 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 16:18:28 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 16:18:28 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 16:18:28 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 16:18:28 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 16:18:29 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 16:18:29 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 16:18:29 - Spring Data repositories initialized!
+2024-05-27 16:18:29 - Started HelloSpringApplication in 7.855 seconds (JVM running for 8.327)
+2024-05-27 16:19:09 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 16:19:09 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 16:19:09 - Detected StandardServletMultipartResolver
+2024-05-27 16:19:09 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 16:19:09 - Completed initialization in 9 ms
+2024-05-27 16:19:09 - GET "/login?error", parameters={masked}
+2024-05-27 16:19:09 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 16:19:09 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:19:09 - Completed 200 OK
+2024-05-27 16:19:15 - test
+2024-05-27 16:19:15 - GET "/login?error", parameters={masked}
+2024-05-27 16:19:15 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 16:19:15 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:19:15 - Completed 200 OK
+2024-05-27 16:19:57 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:19:57 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:19:57 - HikariPool-1 - Shutdown initiated...
+2024-05-27 16:19:57 - HikariPool-1 - Shutdown completed.
+2024-05-27 16:20:01 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 23968 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 16:20:01 - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2024-05-27 16:20:01 - No active profile set, falling back to default profiles: default
+2024-05-27 16:20:02 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 16:20:02 - Finished Spring Data repository scanning in 82ms. Found 1 JPA repository interfaces.
+2024-05-27 16:20:03 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 16:20:03 - Starting service [Tomcat]
+2024-05-27 16:20:03 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 16:20:03 - Initializing Spring embedded WebApplicationContext
+2024-05-27 16:20:03 - Root WebApplicationContext: initialization completed in 2013 ms
+2024-05-27 16:20:04 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:20:04 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 16:20:04 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 16:20:04 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 16:20:04 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 16:20:05 - HikariPool-1 - Starting...
+2024-05-27 16:20:05 - HikariPool-1 - Start completed.
+2024-05-27 16:20:05 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 16:20:06 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 16:20:06 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:20:07 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@314b7945, org.springframework.security.web.context.SecurityContextPersistenceFilter@44641d6c, org.springframework.security.web.header.HeaderWriterFilter@32e5af53, org.springframework.security.web.csrf.CsrfFilter@6d31f106, org.springframework.security.web.authentication.logout.LogoutFilter@6735f210, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@13004dd8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59d5a6fd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e191150, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32da97fd, org.springframework.security.web.session.SessionManagementFilter@13ca16bf, org.springframework.security.web.access.ExceptionTranslationFilter@2bfc2f8b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@394fb736]
+2024-05-27 16:20:07 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 16:20:07 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 16:20:07 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 16:20:07 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 16:20:07 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 16:20:08 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 16:20:08 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 16:20:08 - Spring Data repositories initialized!
+2024-05-27 16:20:08 - Started HelloSpringApplication in 7.454 seconds (JVM running for 7.919)
+2024-05-27 16:20:10 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 16:20:10 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 16:20:10 - Detected StandardServletMultipartResolver
+2024-05-27 16:20:10 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 16:20:10 - Completed initialization in 8 ms
+2024-05-27 16:20:10 - GET "/login?error", parameters={masked}
+2024-05-27 16:20:10 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 16:20:10 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:20:10 - Completed 200 OK
+2024-05-27 16:20:20 - test
+2024-05-27 16:20:20 - GET "/login?error", parameters={masked}
+2024-05-27 16:20:20 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 16:20:20 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:20:20 - Completed 200 OK
+2024-05-27 16:22:46 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:22:46 - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:22:46 - HikariPool-1 - Shutdown initiated...
+2024-05-27 16:22:46 - HikariPool-1 - Shutdown completed.
+2024-05-27 16:22:51 - Starting HelloSpringApplication on DESKTOP-KIA3HI9 with PID 1488 (C:\Users\JANG\gittest\hello-spring\out\production\classes started by JANG in C:\Users\JANG\gittest\hello-spring)
+2024-05-27 16:22:51 - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2024-05-27 16:22:51 - No active profile set, falling back to default profiles: default
+2024-05-27 16:22:52 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2024-05-27 16:22:52 - Finished Spring Data repository scanning in 76ms. Found 1 JPA repository interfaces.
+2024-05-27 16:22:53 - Tomcat initialized with port(s): 8080 (http)
+2024-05-27 16:22:53 - Starting service [Tomcat]
+2024-05-27 16:22:53 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2024-05-27 16:22:53 - Initializing Spring embedded WebApplicationContext
+2024-05-27 16:22:53 - Root WebApplicationContext: initialization completed in 2077 ms
+2024-05-27 16:22:53 - Initializing ExecutorService 'applicationTaskExecutor'
+2024-05-27 16:22:53 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-27 16:22:54 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-27 16:22:54 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2024-05-27 16:22:54 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-05-27 16:22:54 - HikariPool-1 - Starting...
+2024-05-27 16:22:54 - HikariPool-1 - Start completed.
+2024-05-27 16:22:54 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-05-27 16:22:55 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-27 16:22:55 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-27 16:22:57 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8077c97, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e45a357, org.springframework.security.web.header.HeaderWriterFilter@643ecfef, org.springframework.security.web.csrf.CsrfFilter@4044589a, org.springframework.security.web.authentication.logout.LogoutFilter@7a55fb81, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1b0e031b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@bb8ead8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b1252c8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22865072, org.springframework.security.web.session.SessionManagementFilter@2bb31455, org.springframework.security.web.access.ExceptionTranslationFilter@aa752bb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2755617b]
+2024-05-27 16:22:57 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-27 16:22:57 - 17 mappings in 'requestMappingHandlerMapping'
+2024-05-27 16:22:57 - Adding welcome page: class path resource [static/index.html]
+2024-05-27 16:22:57 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-27 16:22:57 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-27 16:22:58 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-27 16:22:58 - Triggering deferred initialization of Spring Data repositories…
+2024-05-27 16:22:58 - Spring Data repositories initialized!
+2024-05-27 16:22:58 - Started HelloSpringApplication in 7.632 seconds (JVM running for 8.09)
+2024-05-27 16:22:59 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-27 16:22:59 - Initializing Servlet 'dispatcherServlet'
+2024-05-27 16:22:59 - Detected StandardServletMultipartResolver
+2024-05-27 16:22:59 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-27 16:22:59 - Completed initialization in 9 ms
+2024-05-27 16:22:59 - GET "/login?error", parameters={masked}
+2024-05-27 16:22:59 - Mapped to hello.hellospring.controller.LoginController#login()
+2024-05-27 16:22:59 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:23:00 - Completed 200 OK
+2024-05-27 16:23:04 - test
+2024-05-27 16:23:04 - Member(id=4, username=test, password=$2a$10$laWP7N/aM0Rc/ORBXvs4z.J.h1lsD7V9RXU.kMv3NnhDYkynyWwXy, email=test@test.com, pw=1234, name=테스트맨, gender=M, birthdate=2020-02-02, contact=010-1234-5678, accept=true, roles=[])
+2024-05-27 16:23:04 - Member(id=4, username=test, password=$2a$10$laWP7N/aM0Rc/ORBXvs4z.J.h1lsD7V9RXU.kMv3NnhDYkynyWwXy, email=test@test.com, pw=1234, name=테스트맨, gender=M, birthdate=2020-02-02, contact=010-1234-5678, accept=true, roles=[])
+2024-05-27 16:23:04 - GET "/", parameters={}
+2024-05-27 16:23:04 - Mapped to hello.hellospring.controller.HomeController#home()
+2024-05-27 16:23:04 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:23:04 - Completed 200 OK
+2024-05-27 16:23:10 - GET "/tables", parameters={}
+2024-05-27 16:23:10 - Mapped to hello.hellospring.controller.HomeController#getTableList()
+2024-05-27 16:23:10 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:23:10 - Completed 200 OK
+2024-05-27 16:23:11 - GET "/tableList", parameters={}
+2024-05-27 16:23:11 - Mapped to hello.hellospring.table.TableController#showTables()
+2024-05-27 16:23:11 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-05-27 16:23:11 - Writing [[TableDto(tableName=ANNUAL, columnList=[ColumnDto(columnName=CORRESPONDINGYEAR, DataType=BIGINT), Co (truncated)...]
+2024-05-27 16:23:11 - Completed 200 OK
+2024-05-27 16:23:11 - GET "/table/0", parameters={}
+2024-05-27 16:23:11 - Mapped to hello.hellospring.table.TableController#selectTbl(int)
+2024-05-27 16:23:11 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-05-27 16:23:11 - Writing [[]]
+2024-05-27 16:23:11 - Completed 200 OK
+2024-05-27 16:23:17 - GET "/table/5", parameters={}
+2024-05-27 16:23:17 - Mapped to hello.hellospring.table.TableController#selectTbl(int)
+2024-05-27 16:23:17 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-05-27 16:23:17 - Writing [[{ROLE=user, ACCEPT=FALSE, CONTACT=01021392477, PASSWORD=1234, PW=!Q@W#E$R, GENDER=1, USERNAME=meow, (truncated)...]
+2024-05-27 16:23:17 - Completed 200 OK
+2024-05-27 16:24:40 - GET "/", parameters={}
+2024-05-27 16:24:40 - Mapped to hello.hellospring.controller.HomeController#home()
+2024-05-27 16:24:40 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2024-05-27 16:24:40 - Completed 200 OK
